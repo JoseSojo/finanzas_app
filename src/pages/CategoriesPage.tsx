@@ -8,8 +8,8 @@ export default function Categories () {
     const cashContext = useCashContext()
 
     return(
-        <BasicLayotu>
-            <div className="grid gap-y-5 p-5">
+        <BasicLayotu title='Categorias'>
+            <div className="grid gap-y-5 p-5 w-full md:w-[50%] mx-auto">
                 <CardBasic cls='flex'>
                     <button 
                         className='flex-1 p-5 text-center hover:bg-gray-100 rounded-l-md'

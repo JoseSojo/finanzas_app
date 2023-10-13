@@ -12,7 +12,7 @@ export default function Transaction () {
 
 
     return(
-        <BasicLayotu>
+        <BasicLayotu  title='Transacciones'>
             {modal && <ModalForm close={setModal} /> }
             <main className='grid md:grid-cols-2 gap-5 p-5'>
                 <CardBasic cls='grid place-items-center'>

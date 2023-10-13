@@ -35,6 +35,8 @@ export const ModalForm: React.FC<ModalFormProps> = ({close}) => {
         event.preventDefault();
         const storage = window.localStorage.getItem('transactions');
 
+        if (data.concep == '' || data.mount <= 0) return close(false);
+
         const note = parseInt(`${cashContext.cash}`) + parseInt(`${data.mount}`);
         if (storage !== null) {
             const d = JSON.parse(storage);
@@ -85,7 +87,7 @@ export const ModalForm: React.FC<ModalFormProps> = ({close}) => {
 
     return (
         <div className='absolute z-50 min-h-screen w-full bg-gray-950 bg-opacity-50 flex justify-center items-center'>
-            <CardBasic cls='mx-10 py-5'>
+            <CardBasic cls='mx-10 py-5 w-full md:w-[50%] mx-auto'>
                 <form onSubmit={handleSubmit}>
                     <h3 className='font-mono text-xl text-center text-gray-600'>Transsacción</h3>
                     <div className='flex justify-center items-center mt-4 gap-x-10'>
